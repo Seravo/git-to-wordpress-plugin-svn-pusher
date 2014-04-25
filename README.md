@@ -1,6 +1,7 @@
 Git to wordpress plugin svn pusher
 ======================
 Easily push your wordpress plugin from git repo into svn.
+
 Remember versionnumbers in `readme.txt` and `your_plugin.php`
 
 ##Usage
