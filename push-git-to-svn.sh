@@ -2,7 +2,8 @@
 
 #Check these variables accordingly to your plugin
 
-PLUGINNAME="your_plugin_name.php" #CHANGE THIS LINE FOR YOUR FILE <============================
+PLUGINNAME="dashboard-log-monitor.php" #CHANGE THIS LINE FOR YOUR FILE 
+<============================
 GITDIR="git"
 SVNDIR="svn"
 
@@ -17,9 +18,10 @@ git pull origin master
 # Check version in readme.txt is the same as plugin file
 NEWVERSION1=`grep "^Stable tag" readme.txt | awk -F' ' '{print $3}'`
 echo "readme.txt version: $NEWVERSION1"
-NEWVERSION2=`grep "^Version" $PLUGINNAME | awk -F' ' '{print $2}'`
+NEWVERSION2=`grep "Version" $PLUGINNAME | awk -F' ' '{print $3}'`
 echo "$PLUGINNAME version: $NEWVERSION2"
-if [ "$NEWVERSION1" != "$NEWVERSION2" ]; then echo "Versions don't match. Exiting...."; exit 1; fi
+if [ "$NEWVERSION1" != "$NEWVERSION2" ]; then echo "Versions don't 
+match. Exiting...."; exit 1; fi
 echo "Versions match in readme.txt and PHP file. Let's proceed..."
 
 # sed to bump version?
