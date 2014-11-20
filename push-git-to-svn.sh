@@ -38,7 +38,7 @@ cd ../$SVNDIR/
 svn update
 
 # use rsync --delete to sync all add/delete changes?
-cp -r ../$GITDIR/* ./trunk
+cp -r ../$GITDIR/* trunk/
 svn add trunk --force
 svn ci -m "Sync with git"
 
