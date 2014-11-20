@@ -2,8 +2,8 @@
 
 #Check these variables accordingly to your plugin
 
-PLUGINNAME="dashboard-log-monitor.php" #CHANGE THIS LINE FOR YOUR FILE 
-<============================
+PLUGINNAME="your-plugin-name.php" #CHANGE THIS LINE FOR YOUR PLUGIN
+#============================
 GITDIR="git"
 SVNDIR="svn"
 
@@ -38,7 +38,7 @@ cd ../$SVNDIR/
 svn update
 
 # use rsync --delete to sync all add/delete changes?
-cp ../$GITDIR/* ./trunk
+cp -r ../$GITDIR/* ./trunk
 svn add trunk --force
 svn ci -m "Sync with git"
 
